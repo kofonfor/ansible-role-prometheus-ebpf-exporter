@@ -56,7 +56,9 @@ programs:
               decoders:
                 - name: uint
     kprobes:
+{% if ansible_kernel is version('5.3.0', '<') %}
       blk_start_request: trace_req_start
+{% endif %}
       blk_mq_start_request: trace_req_start
       blk_account_io_completion: trace_req_completion
     code: |
