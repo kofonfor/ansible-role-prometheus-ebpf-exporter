@@ -5,10 +5,10 @@
   apt: name="linux-headers-{{ ansible_kernel }}"
 
 - name: make ebpf_exporter
-  shell: cd /root/ebpf_exporter && make creates=/root/ebpf_exporter/release/ebpf_exporter-1.2.2.tar.gz
+  shell: cd /root/ebpf_exporter && make creates=/root/ebpf_exporter/release/ebpf_exporter-1.2.2-4-g9780ba5.tar.gz
 
 - name: download ebpf_exporter
-  copy: remote_src=yes src=/root/ebpf_exporter/release/ebpf_exporter-1.2.2.tar.gz dest=/root/ebpf_exporter.tar.gz
+  copy: remote_src=yes src=/root/ebpf_exporter/release/ebpf_exporter-1.2.2-4-g9780ba5.tar.gz dest=/root/ebpf_exporter.tar.gz
 
 - name: unpack ebpf_exporter
   unarchive: copy=no src="/root/ebpf_exporter.tar.gz" dest=/opt
