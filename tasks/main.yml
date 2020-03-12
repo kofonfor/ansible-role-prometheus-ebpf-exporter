@@ -1,5 +1,5 @@
 - name: checkout ebpf_exporter
-  git: repo=https://github.com/cloudflare/ebpf_exporter.git dest=/root/ebpf_exporter version=cf86dccfd98920db743e3d39b8bcbc6c5b7031aa
+  git: repo=https://github.com/cloudflare/ebpf_exporter.git dest=/root/ebpf_exporter version=9780ba5c53c7894423caa8fa168f0570a15c6138
 
 - name: install linux-headers-{{ ansible_kernel }}
   apt: name="linux-headers-{{ ansible_kernel }}"
