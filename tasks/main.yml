@@ -14,7 +14,7 @@
   unarchive: copy=no src="/root/ebpf_exporter.tar.gz" dest=/opt
 
 - name: create a link
-  file: src=/opt/ebpf_exporter-1.2.2/ebpf_exporter dest=/opt/ebpf_exporter state=link
+  file: src=/opt/ebpf_exporter-1.2.2-4-g9780ba5/ebpf_exporter dest=/opt/ebpf_exporter state=link
 
 - name: put /etc/ebpf_exporter_config.yaml
   template: src=ebpf_exporter_config.yaml dest=/etc/ebpf_exporter_config.yaml backup=yes
